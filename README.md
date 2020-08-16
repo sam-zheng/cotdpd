@@ -1,2 +1,2 @@
 # cotdpd
-Clear one technical debt per day
+Clear One Technical Debt Per Day
