@@ -1,2 +1,2 @@
 # dl
-This memo describes my research on how linux dynamic linker works.
+Some notes on Linux runtime dynamic linker.
