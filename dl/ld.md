@@ -1,5 +1,5 @@
 # How runtime dynamic linker works in Linux
-How the runtime dynamic linker works in Linux had been a technical debt for me for a really long time until I decided to figure it out... TL;DR.
+How the runtime dynamic linker works in Linux had been a technical debt for me for a really long time until I decided to figure it out...
 ### 1. Prepare minimal test programs
 l1.c, which will be compiled into a shared lib (so), defines a function which will be called by the main program (l2, see below):
 	
