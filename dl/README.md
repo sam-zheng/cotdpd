@@ -1,2 +1,2 @@
 # dl
-Some notes on Linux runtime dynamic linker.
+Some notes on Linux dynamic linker.
