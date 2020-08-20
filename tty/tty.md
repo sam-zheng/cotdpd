@@ -24,7 +24,15 @@ flow of data from keyboard to tty and finally display in the case of vt:
 >key stroke => keyboard interrupt handler => vt keyboard input handler (`kbd_event()`) => vt `kbd_keycode()` => char inserted into `vc_data.port` => `vc_data.port->buf->work` is scheduled to push the character into `tty_ldisc` => display (echo) the char when necessary and wake up the process waiting on the input when appropriate
 
 ### 3. pty
-Pseudo tty, kind of like pipe, it has a master/slave pair when opened, output to one end becomes the input of the other, see code `pty_init`...
+Pseudo tty, when opened, it has a master/slave pair, output to one end becomes the input of the other(a bit like a pipe, except that you can only write at one end and read at the other, instead you can read & write with either the master or slave of a pty), see code `pty_init`.
+Once the `devtmpfs` is mounted, e.g. by setting kernel command line parameter "devtmpfs.mount=1", the pty device file can be found at `/dev/ptmx`, opening it will return the master `fd` of the pty master/slave pair, the slave `fd` can be retrieved with `sys_ioctl` using cmd TIOCGPTN.
+Note, if you boot from a bare kernel, creating of pty will not normally work, since the `devpts` file system is not mounted by default, and it has to be mounted at `/dev/pts`, the following shell script will do that:
+
+	#!/bin/sh
+	if [ ! -d /dev/pts ]; then
+	  mkdir /dev/pts
+	  mount -t devpts none /dev/pts
+	fi 
 
 ### Conclusion
 It has become a bit clearer after looking into the source code, still more details to be studied though...
