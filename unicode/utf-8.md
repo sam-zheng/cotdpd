@@ -3,7 +3,7 @@ UTF-8 encoding schema uses 1-4 bytes to encode a character, depending on its cod
 
 `c` represents the code point of a character, `e` represents the utf-8 encoded value of `c`, it's encoded as follows:
 
-#### c < 0x80: _0*******_, 7 bits required
+#### c < 0x80: _0*******_, 7 bits for the character
 	
 	e = c
 	
@@ -22,7 +22,7 @@ UTF-8 encoding schema uses 1-4 bytes to encode a character, depending on its cod
 
 Note that here the surrogates have to be checked: high surrogates: [0xD800, 0xDC00), low surrogates: [0xDC00, 0xE000), the combination of which forms the code space [0x10000, 0x110000)
 
-#### c < 0x110000: _11110*** 10****** 10****** 10******_
+#### c < 0x110000: _11110*** 10****** 10****** 10******_, 21 bits required
 
 	b1 = (0xf0 | (c >> 18)) << 24
 	b2 = (0x80 | ((c >> 12) & 0x3f)) << 16
