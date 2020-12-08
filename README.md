@@ -9,4 +9,4 @@ Clear One Technical Debt Per Day
 
 [Notes on network bridge](network/bridge.md)
 
-[Notes on ip command](network/rtnetlink.md)
+[Notes on the ip command](network/rtnetlink.md)
