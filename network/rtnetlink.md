@@ -1,0 +1,2 @@
+# rtnetlink
+The command `ip route` calls rtnetlink in the kernel to do it's work. `rtnetlink_net_init` is called once per net namespace, where a `sock` is created for receiving commands. the `sock` is an instance of `netlink_sock` whose `netlink_rcv` is set to `rtnetlink_rcv`, which gets called from `netlink_unicast_kernel` which is called by `netlink_sendmsg` which is then called by the system call `__sys_sendmsg`. user space program `ip` creates a netlink socket to talk to the per-net socket in the kernel space(`net->rtnl`, see `rtnetlink_net_init`).
