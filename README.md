@@ -3,33 +3,19 @@ Clear One Technical Debt Per Day (or per 100 days ;))
 
 ### General stuff
 
-<li>
+1. [How dynamic linker/loader works in Linux](dl/dl.md)
 
-[How dynamic linker/loader works in Linux](dl/dl.md)
+2. [Notes on Linux tty implemantation](tty/tty.md)
 
-<li>
-
-[Notes on Linux tty implemantation](tty/tty.md)
-
-<li>
-
-[Notes on UTF-8](unicode/utf-8.md)
+3. [Notes on UTF-8](unicode/utf-8.md)
 
 ### Networking
 
-<li>
+4. [Notes on network bridge](network/bridge.md)
 
-[Notes on network bridge](network/bridge.md)
+5. [Notes on the ip command](network/rtnetlink.md)
 
-<li>
+6. [Notes on TUN/TAP driver](network/tuntap.md)
 
-[Notes on the ip command](network/rtnetlink.md)
-
-<li>
-
-[Notes on TUN/TAP driver](network/tuntap.md)
-
-<li>
-
-[Notes on ping](network/ping.md)
+7. [Notes on ping](network/ping.md)
 
