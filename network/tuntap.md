@@ -1,5 +1,5 @@
-# How tun/tap works
-https://www.kernel.org/doc/html/latest/networking/tuntap.html
+# How TUN/TAP works
+[Linux kernel doc on TUN/TAP driver](https://www.kernel.org/doc/html/latest/networking/tuntap.html)
 
 ### Bootstrap
 when linux initializes itself, `tun_init`(`drivers/net/tun.c`) is called, which, among other things, registers `tun_miscdev`, a `miscdevice` by calling `misc_register` with the the system (in a global list `misc_list`). `miscdevice` is a kind of char device, see also `misc_init`, `misc_open`.
