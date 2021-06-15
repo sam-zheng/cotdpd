@@ -11,11 +11,16 @@ Clear One Technical Debt Per Day (or per 100 days ;))
 
 ### Networking
 
-4. [Notes on network bridge](network/bridge.md)
+1. [Notes on network bridge](network/bridge.md)
 
-5. [Notes on the ip command](network/rtnetlink.md)
+2. [Notes on the ip command](network/rtnetlink.md)
 
-6. [Notes on TUN/TAP driver](network/tuntap.md)
+3. [Notes on TUN/TAP driver](network/tuntap.md)
 
-7. [Notes on ping](network/ping.md)
+4. [Notes on ping](network/ping.md)
 
+### Java
+
+1. [Karaf and OSGi](java/karaf.md)
+
+2. [Java RESTful API](java/rest.md)
